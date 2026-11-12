@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Tests | SSDP Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/mocktest.css">
+</head>
+<body class="app-page">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="sidebar-brand" href="dashboard.html"><span class="brand-mark">S</span><span>SSDP <small>Student Portal</small></span></a>
+    <div class="sidebar-label">MENU</div>
+    <nav class="side-nav" aria-label="Main navigation">
+      <a class="nav-link" href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+      <a class="nav-link" href="profile.html"><span class="nav-icon">♙</span>My Profile</a>
+      <a class="nav-link" href="practice.html"><span class="nav-icon">▤</span>Practice Zone</a>
+      <a class="nav-link active" href="mocktest.html"><span class="nav-icon">◷</span>Mock Tests</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-help"><div class="help-icon">?</div><strong>Keep learning!</strong><p>Small steps every day lead to big achievements.</p></div>
+      <button class="nav-link logout-link" id="logoutBtn" type="button"><span class="nav-icon">↪</span>Logout</button>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+      <div class="topbar-title"><span class="topbar-heading">Mock Tests</span><span class="topbar-subtitle">Evaluate your preparation with timed assessments</span></div>
+      <div class="topbar-user"><div class="user-avatar" id="topInitials">S</div><div class="user-meta"><strong id="topUserName">Student</strong><span>Student</span></div></div>
+    </header>
+
+    <section class="mock-content">
+      <div class="mock-heading">
+        <div><span class="eyebrow blue">ASSESS YOUR READINESS</span><h1>Mock Tests</h1><p>Attempt a timed test, review your result and improve your preparation.</p></div>
+      </div>
+
+      <section class="mock-summary">
+        <div class="mock-stat"><span class="stat-icon blue-stat">◷</span><div><small>Tests completed</small><strong id="testsCompleted">0</strong></div></div>
+        <div class="mock-stat"><span class="stat-icon green-stat">✓</span><div><small>Average score</small><strong id="averageScore">0%</strong></div></div>
+        <div class="mock-stat"><span class="stat-icon purple-stat">★</span><div><small>Best score</small><strong id="bestScore">0%</strong></div></div>
+      </section>
+
+      <section class="mock-main panel" id="testSelection">
+        <div class="panel-heading"><div><h2>Available mock tests</h2><p>Choose a test to begin your assessment</p></div></div>
+        <div class="test-cards">
+          <article class="test-card">
+            <div class="test-card-icon">⌘</div><span class="test-level">BEGINNER</span>
+            <h3>Technical Fundamentals</h3><p>Test your knowledge of HTML, CSS, JavaScript, Python and SQL.</p>
+            <div class="test-meta"><span>10 Questions</span><span>10 Minutes</span></div>
+            <button class="start-test-btn" data-test="fundamentals" type="button">Start Test <span>→</span></button>
+          </article>
+          <article class="test-card">
+            <div class="test-card-icon purple-test-icon">◇</div><span class="test-level intermediate">INTERMEDIATE</span>
+            <h3>Programming &amp; Logic</h3><p>Evaluate programming concepts, problem solving and logical thinking.</p>
+            <div class="test-meta"><span>10 Questions</span><span>10 Minutes</span></div>
+            <button class="start-test-btn" data-test="programming" type="button">Start Test <span>→</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="mock-main panel test-run" id="testRun" hidden>
+        <div class="test-run-header"><div><span class="eyebrow blue" id="runningTestLevel">MOCK ASSESSMENT</span><h2 id="runningTestName">Technical Fundamentals</h2></div><div class="timer-box"><span>TIME LEFT</span><strong id="timer">10:00</strong></div></div>
+        <div class="test-progress"><span id="testProgressBar"></span></div>
+        <div class="test-meta-row"><span id="testQuestionCount">Question 1 of 10</span><span id="answeredCount">0 answered</span></div>
+        <h3 class="test-question" id="testQuestion"></h3>
+        <div class="test-options" id="testOptions"></div>
+        <div class="test-controls"><button class="secondary-btn" id="previousBtn" type="button" disabled>← Previous</button><button class="next-test-btn" id="nextQuestionBtn" type="button">Next Question →</button><button class="submit-test-btn" id="submitTestBtn" type="button">Submit Test</button></div>
+      </section>
+
+      <section class="mock-main panel test-result" id="testResult" hidden>
+        <div class="result-check">✓</div><span class="eyebrow blue">ASSESSMENT COMPLETED</span><h2>Your test result</h2>
+        <p id="resultDescription">Your mock test has been evaluated.</p>
+        <div class="result-percent" id="resultPercent">0%</div>
+        <div class="result-breakdown"><div><strong id="resultCorrect">0</strong><span>Correct</span></div><div><strong id="resultIncorrect">0</strong><span>Incorrect</span></div><div><strong id="resultTotal">10</strong><span>Total</span></div></div>
+        <button class="start-test-btn result-back-btn" id="backToTestsBtn" type="button">Back to Mock Tests</button>
+      </section>
+
+      <section class="mock-note"><span>ⓘ</span><p><strong>Before you begin:</strong> Each test is timed. Your answers are evaluated automatically when you submit or when the timer ends.</p></section>
+      <footer class="page-footer">© 2026 SSDP Portal · Student Skill Development &amp; Placement Preparation</footer>
+    </section>
+  </main>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/mocktest.js"></script>
+</body>
+</html>

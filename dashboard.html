@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | SSDP Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="app-page">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="sidebar-brand" href="dashboard.html">
+        <span class="brand-mark">S</span>
+        <span>SSDP <small>Student Portal</small></span>
+      </a>
+
+      <div class="sidebar-label">MENU</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a class="nav-link" href="profile.html"><span class="nav-icon">♙</span>My Profile</a>
+        <a class="nav-link" href="practice.html"><span class="nav-icon">▤</span>Practice Zone</a>
+        <a class="nav-link" href="mocktest.html"><span class="nav-icon">◷</span>Mock Tests</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-help">
+          <div class="help-icon">?</div>
+          <strong>Keep learning!</strong>
+          <p>Small steps every day lead to big achievements.</p>
+        </div>
+        <button class="nav-link logout-link" id="logoutBtn" type="button">
+          <span class="nav-icon">↪</span>Logout
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+        <div class="topbar-title">
+          <span class="topbar-heading">Student Dashboard</span>
+          <span class="topbar-subtitle">Track your learning and placement preparation</span>
+        </div>
+        <div class="topbar-user">
+          <div class="user-avatar" id="userInitials">S</div>
+          <div class="user-meta"><strong id="topUserName">Student</strong><span>Student</span></div>
+        </div>
+      </header>
+
+      <section class="dashboard-content">
+        <div class="welcome-banner">
+          <div class="welcome-copy">
+            <span class="welcome-tag">YOUR LEARNING SPACE</span>
+            <h1 id="welcomeTitle">Welcome back!</h1>
+            <p>Keep building your skills. Every practice session brings you one step closer to your goals.</p>
+            <a class="welcome-action" href="practice.html">Continue practicing <span>→</span></a>
+          </div>
+          <div class="welcome-art" aria-hidden="true">
+            <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+            <div class="learning-card">
+              <div class="learning-card-head"><span></span><span></span><span></span></div>
+              <div class="learning-badge">✓</div>
+              <div class="learning-line wide"></div><div class="learning-line"></div>
+              <div class="learning-progress"><span></span></div>
+              <small>You're making progress</small>
+            </div>
+            <div class="floating-star">✦</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div><h2>Your overview</h2><p>A quick look at your preparation activity</p></div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon icon-blue">▤</div>
+            <div class="stat-label">Practice Questions</div>
+            <div class="stat-value" id="practiceCount">0</div>
+            <div class="stat-note">Questions attempted</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon icon-purple">◷</div>
+            <div class="stat-label">Mock Tests</div>
+            <div class="stat-value" id="mockCount">0</div>
+            <div class="stat-note">Tests completed</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon icon-green">✓</div>
+            <div class="stat-label">Average Score</div>
+            <div class="stat-value" id="averageScore">0%</div>
+            <div class="stat-note">Across completed tests</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon icon-orange">★</div>
+            <div class="stat-label">Best Score</div>
+            <div class="stat-value" id="bestScore">0%</div>
+            <div class="stat-note">Your highest test score</div>
+          </article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel progress-panel">
+            <div class="panel-heading"><div><h2>Preparation progress</h2><p>Your activity at a glance</p></div><span class="panel-chip">Overview</span></div>
+            <div class="progress-item">
+              <div class="progress-label"><strong>Practice activity</strong><span id="practiceProgressText">0 completed</span></div>
+              <div class="progress-track"><span id="practiceProgressBar" style="width:0%"></span></div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label"><strong>Mock test activity</strong><span id="mockProgressText">0 completed</span></div>
+              <div class="progress-track purple-track"><span id="mockProgressBar" style="width:0%"></span></div>
+            </div>
+            <div class="progress-footnote">Your progress will update as you practice and complete mock tests.</div>
+          </section>
+
+          <section class="panel quick-panel">
+            <div class="panel-heading"><div><h2>Quick actions</h2><p>Continue your preparation</p></div></div>
+            <a class="quick-action" href="practice.html"><span class="quick-icon">▤</span><span><strong>Practice questions</strong><small>Improve your topic knowledge</small></span><b>→</b></a>
+            <a class="quick-action" href="mocktest.html"><span class="quick-icon purple-quick">◷</span><span><strong>Take a mock test</strong><small>Check your preparation level</small></span><b>→</b></a>
+            <a class="quick-action" href="profile.html"><span class="quick-icon green-quick">♙</span><span><strong>Update your profile</strong><small>Keep your details up to date</small></span><b>→</b></a>
+          </section>
+        </div>
+
+        <section class="panel activity-panel">
+          <div class="panel-heading"><div><h2>Getting started</h2><p>Suggested steps to make the most of your portal</p></div></div>
+          <div class="starter-grid">
+            <div class="starter-item"><span>01</span><div><strong>Complete your profile</strong><p>Add your academic details and skills.</p></div></div>
+            <div class="starter-item"><span>02</span><div><strong>Start practicing</strong><p>Choose a topic and solve questions regularly.</p></div></div>
+            <div class="starter-item"><span>03</span><div><strong>Attempt a mock test</strong><p>Evaluate your preparation with a timed test.</p></div></div>
+          </div>
+        </section>
+
+        <footer class="page-footer">© 2026 SSDP Portal · Student Skill Development &amp; Placement Preparation</footer>
+      </section>
+    </main>
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

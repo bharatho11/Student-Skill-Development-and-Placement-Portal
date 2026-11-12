@@ -1,0 +1,23 @@
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Generated files
+dist/
+build/

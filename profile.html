@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | SSDP Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body class="app-page">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="sidebar-brand" href="dashboard.html">
+        <span class="brand-mark">S</span>
+        <span>SSDP <small>Student Portal</small></span>
+      </a>
+      <div class="sidebar-label">MENU</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a class="nav-link active" href="profile.html"><span class="nav-icon">♙</span>My Profile</a>
+        <a class="nav-link" href="practice.html"><span class="nav-icon">▤</span>Practice Zone</a>
+        <a class="nav-link" href="mocktest.html"><span class="nav-icon">◷</span>Mock Tests</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help">
+          <div class="help-icon">?</div><strong>Keep learning!</strong>
+          <p>Small steps every day lead to big achievements.</p>
+        </div>
+        <button class="nav-link logout-link" id="logoutBtn" type="button"><span class="nav-icon">↪</span>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+        <div class="topbar-title">
+          <span class="topbar-heading">My Profile</span>
+          <span class="topbar-subtitle">View and manage your student information</span>
+        </div>
+        <div class="topbar-user">
+          <div class="user-avatar" id="topInitials">B</div>
+          <div class="user-meta"><strong id="topUserName">Student</strong><span>Student</span></div>
+        </div>
+      </header>
+
+      <section class="profile-content">
+        <div class="profile-page-heading">
+          <div><span class="eyebrow blue">STUDENT ACCOUNT</span><h1>My Profile</h1><p>Keep your personal and academic information up to date.</p></div>
+          <button class="edit-profile-btn" id="editProfileBtn" type="button">✎ <span>Edit Profile</span></button>
+        </div>
+
+        <section class="profile-hero panel">
+          <div class="profile-avatar" id="profileAvatar">B</div>
+          <div class="profile-identity">
+            <h2 id="displayName">Bharath</h2>
+            <p id="displayCourse">MCA Student</p>
+            <span class="profile-status"><i></i> Student Account</span>
+          </div>
+          <div class="profile-hero-note"><span>✦</span><div><strong>Your learning journey</strong><small>Build skills and prepare for opportunities.</small></div></div>
+        </section>
+
+        <form id="profileForm">
+          <section class="panel profile-section">
+            <div class="panel-heading"><div><h2>Personal Information</h2><p>Your basic contact and personal details</p></div><span class="section-symbol">♙</span></div>
+            <div class="profile-fields">
+              <div class="profile-field"><label for="fullName">Full Name</label><input id="fullName" type="text" value="Bharath" disabled></div>
+              <div class="profile-field"><label for="email">Email Address</label><input id="email" type="email" disabled></div>
+              <div class="profile-field"><label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="Enter phone number" disabled></div>
+              <div class="profile-field"><label for="dob">Date of Birth</label><input id="dob" type="text" value="11-Feb-2002" placeholder="DD-MMM-YYYY" disabled></div>
+            </div>
+          </section>
+
+          <section class="panel profile-section">
+            <div class="panel-heading"><div><h2>Academic Information</h2><p>Your current education details</p></div><span class="section-symbol blue-symbol">▤</span></div>
+            <div class="profile-fields">
+              <div class="profile-field"><label for="college">College Name</label><input id="college" type="text" value="SRM" disabled></div>
+              <div class="profile-field"><label for="course">Course</label><input id="course" type="text" value="MCA" disabled></div>
+              <div class="profile-field"><label for="semester">Semester</label><input id="semester" type="text" value="III Semester" disabled></div>
+              <div class="profile-field"><label for="graduation">Expected Graduation Year</label><input id="graduation" type="number" placeholder="Enter graduation year" disabled></div>
+            </div>
+          </section>
+
+          <section class="panel profile-section">
+            <div class="panel-heading"><div><h2>Technical Skills</h2><p>Add the skills you are learning or have practised</p></div><span class="section-symbol green-symbol">✧</span></div>
+            <div class="skills-display" id="skillsDisplay">
+              <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span>
+            </div>
+            <div class="skills-editor" id="skillsEditor" hidden>
+              <input id="skillInput" type="text" placeholder="Enter a skill, e.g. Python">
+              <button type="button" id="addSkillBtn" class="add-skill-btn">Add Skill</button>
+            </div>
+            <p class="field-hint">You can add or remove skills while editing your profile.</p>
+          </section>
+
+          <div class="profile-actions" id="profileActions" hidden>
+            <button type="button" class="cancel-btn" id="cancelEditBtn">Cancel</button>
+            <button type="submit" class="save-profile-btn">Save Changes</button>
+          </div>
+          <p class="profile-message" id="profileMessage" role="status"></p>
+        </form>
+        <footer class="page-footer">© 2026 SSDP Portal · Student Skill Development &amp; Placement Preparation</footer>
+      </section>
+    </main>
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Zone | SSDP Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/practice.css">
+</head>
+<body class="app-page">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="sidebar-brand" href="dashboard.html"><span class="brand-mark">S</span><span>SSDP <small>Student Portal</small></span></a>
+      <div class="sidebar-label">MENU</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a class="nav-link" href="profile.html"><span class="nav-icon">♙</span>My Profile</a>
+        <a class="nav-link active" href="practice.html"><span class="nav-icon">▤</span>Practice Zone</a>
+        <a class="nav-link" href="mocktest.html"><span class="nav-icon">◷</span>Mock Tests</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><div class="help-icon">?</div><strong>Keep learning!</strong><p>Small steps every day lead to big achievements.</p></div>
+        <button class="nav-link logout-link" id="logoutBtn" type="button"><span class="nav-icon">↪</span>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+        <div class="topbar-title"><span class="topbar-heading">Practice Zone</span><span class="topbar-subtitle">Learn, practice and strengthen your skills</span></div>
+        <div class="topbar-user"><div class="user-avatar" id="topInitials">S</div><div class="user-meta"><strong id="topUserName">Student</strong><span>Student</span></div></div>
+      </header>
+
+      <section class="practice-content">
+        <div class="practice-heading">
+          <div><span class="eyebrow blue">BUILD YOUR SKILLS</span><h1>Practice Zone</h1><p>Choose a topic, answer questions and track your learning progress.</p></div>
+        </div>
+
+        <section class="practice-summary">
+          <div class="summary-item"><span class="summary-icon blue-summary">▤</span><div><small>Questions attempted</small><strong id="totalAttempted">0</strong></div></div>
+          <div class="summary-item"><span class="summary-icon green-summary">✓</span><div><small>Correct answers</small><strong id="totalCorrect">0</strong></div></div>
+          <div class="summary-item"><span class="summary-icon purple-summary">％</span><div><small>Accuracy</small><strong id="accuracy">0%</strong></div></div>
+        </section>
+
+        <section class="practice-layout">
+          <aside class="topic-panel panel">
+            <div class="panel-heading"><div><h2>Practice topics</h2><p>Select a subject to begin</p></div></div>
+            <div id="topicList" class="topic-list"></div>
+          </aside>
+
+          <section class="question-panel panel">
+            <div id="practiceWelcome" class="practice-welcome">
+              <div class="welcome-icon">✦</div>
+              <h2>Ready to practice?</h2>
+              <p>Select a topic from the left to start answering multiple-choice questions.</p>
+              <div class="welcome-tips"><span>✓ Instant feedback</span><span>✓ Track your progress</span><span>✓ Learn at your pace</span></div>
+            </div>
+
+            <div id="quizArea" hidden>
+              <div class="quiz-topline"><span class="topic-chip" id="currentTopic">Topic</span><span class="question-counter" id="questionCounter">Question 1 of 5</span></div>
+              <div class="quiz-progress"><span id="quizProgressBar"></span></div>
+              <h2 class="question-text" id="questionText"></h2>
+              <div class="options-list" id="optionsList"></div>
+              <div class="answer-feedback" id="answerFeedback" role="status" aria-live="polite" hidden></div>
+              <div class="quiz-controls"><button type="button" class="secondary-btn" id="restartBtn">Restart topic</button><button type="button" class="next-btn" id="nextBtn" disabled>Next question →</button></div>
+            </div>
+
+            <div id="resultArea" class="result-area" hidden>
+              <div class="result-icon">✓</div><span class="eyebrow blue">TOPIC COMPLETED</span>
+              <h2>Good effort!</h2><p id="resultMessage">You've completed this practice set.</p>
+              <div class="result-score"><strong id="resultScore">0/5</strong><span>Correct answers</span></div>
+              <button type="button" class="next-btn" id="retryBtn">Practice again</button>
+            </div>
+          </section>
+        </section>
+        <footer class="page-footer">© 2026 SSDP Portal · Student Skill Development &amp; Placement Preparation</footer>
+      </section>
+    </main>
+  </div>
+  <script src="js/storage.js"></script>
+  <script src="js/practice.js"></script>
+</body>
+</html>
